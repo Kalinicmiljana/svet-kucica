@@ -1,11 +1,14 @@
 # Šapica
 
-Mali statički sajt o kučićima na srpskom. HTML, CSS i lokalne SVG ilustracije, bez instalacije ili build koraka.
+Statički sajt o kučićima na srpskom. Lokalne SVG ilustracije, pretraga, favoriti, dnevna lista, ideje za aktivnosti i dva posebna vodiča. Favoriti i lista ostaju u lokalnoj memoriji browsera; nema naloga ni slanja tih podataka na server.
 
-Otvorite `index.html` direktno ili pokrenite lokalni server:
+## Lokalno
 
 ```sh
-python3 -m http.server 8080
+node scripts/build.mjs
+python3 -m http.server 8080 --directory dist
 ```
 
-Sajt radi i bez spoljnih fontova, uz sistemske zamene. Za GitHub Pages izaberite objavljivanje iz korena glavne grane repozitorijuma u Settings → Pages.
+`amplify.yml` gradi i objavljuje samo `dist`. README i build skripta nisu u javnim fajlovima. Isti izlaz može da se objavi i Shipvela CLI-jem. GitHub push auto-deploy zahteva instaliranu Shipvela Deploy aplikaciju i uključenu opciju na projektu.
+
+Demo release: sapica-20261007-v2.
